@@ -1,23 +1,64 @@
 nav {
     background-color: steelblue;
     padding: 10px;
-}
-nav a {
+  }
+  
+  nav a {
     color: white;
     display: block;
     padding: 20px;
-}
-h1 {
+  }
+  
+  h1 {
     color: steelblue;
-}
-img {
+  }
+  
+  img {
     width: 150px;
     height: auto;
     border: 1px solid steelblue;
     padding: 2px;
     box-shadow: 0 0 30px gray;
   }
+  
   p {
     padding: 10px;
   }
-  
+
+/* Main section styling */
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+}
+
+/* Aside section styling */
+aside {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Paragraph styling */
+p {
+    padding: 0;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
