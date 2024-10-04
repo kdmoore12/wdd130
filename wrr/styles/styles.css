@@ -1,53 +1,65 @@
-/* Root Variables for Colors */
+/* Define CSS Variables for the color scheme */
 :root {
-    --primary-color: #703B3B;
-    --secondary-color: #B02C63;
-    --accent1-color: #9F5454;
-    --accent2-color: #D54B85;
+    --primary-color: #703B3B;   /* Primary: Deep red/brown */
+    --secondary-color: #B02C63; /* Secondary: Dark pink */
+    --accent1-color: #9F5454;   /* Accent 1: Soft red */
+    --accent2-color: #D54B85;   /* Accent 2: Vibrant pink */
+    --text-color: #333;         /* Dark grey for text */
+    --background-color: #f4f4f4; /* Light grey for background */
+    --white: #ffffff;           /* White for background/text highlights */
 }
 
-/* General Styles */
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--accent1-color);
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
-    max-width: 1200px;
-    margin: auto;
+    box-sizing: border-box;
 }
 
-/* Header Styles */
+/* General page styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--primary-color);
 }
 
 #site-logo {
-    width: 100px;
+    height: 60px;
 }
 
 nav a {
+    color: var(--white);
     text-decoration: none;
-    color: white;
-    margin-left: 20px;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: var(--secondary-color);
 }
 
 /* Hero Section */
 .hero {
     position: relative;
     text-align: center;
+    margin-top: 20px;
 }
 
 .hero-image {
     width: 100%;
-    height: auto;
     display: block;
 }
 
@@ -56,51 +68,97 @@ nav a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.5); /* Adds transparency to background */
+    padding: 10px 20px;
+    font-size: 2.5rem;
 }
 
 /* Article Section */
 article {
+    margin-top: 30px;
     padding: 20px;
-    display: flex;
-    align-items: center;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .client-image {
+    float: right;
     width: 150px;
-    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
 }
 
 article p {
-    max-width: 600px;
+    font-size: 1.2rem;
+    color: var(--text-color);
 }
 
-/* History and Adventure Sections */
+/* Section: History and Adventure */
 section {
-    padding: 20px;
+    margin: 40px 0;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+section p {
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 .rafting-image {
-    width: 150px;
-    margin-right: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
-    padding: 20px;
     text-align: center;
+    padding: 20px;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white);
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+footer a {
+    margin: 0 10px;
 }
 
 footer img {
     width: 30px;
-    margin-left: 10px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Makes icons white */
 }
 
+footer a:hover img {
+    filter: none;
+}
+
+/* Remove underline from social media links */
 footer a {
     text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    article {
+        font-size: 1rem;
+    }
+
+    .client-image {
+        width: 120px;
+    }
 }
