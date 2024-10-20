@@ -196,3 +196,52 @@ footer a {
         width: 120px;
     }
 }
+/* Employee Profiles */
+.employee-profiles {
+    display: flex;
+    justify-content: space-around; /* Space profiles evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.employee-profiles .profile {
+    text-align: center; /* Center align the content */
+    margin: 20px;
+    flex-basis: calc(33.333% - 40px); /* Ensure 3 profiles per row with some margin */
+    max-width: 200px;
+}
+
+.employee-profiles img {
+    width: 150px;  /* Set fixed size for consistency */
+    height: 150px; /* Keep images square */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 10px; /* Space between the image and the text */
+}
+
+.employee-profiles p {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Responsive: Stack profiles on smaller screens */
+@media (max-width: 768px) {
+    .employee-profiles {
+        flex-direction: column; /* Stack profiles vertically */
+        align-items: center;    /* Center them */
+    }
+
+    .employee-profiles .profile {
+        flex-basis: 100%; /* Full width on small screens */
+        max-width: 100%; /* Remove fixed width limit */
+    }
+
+    .employee-profiles img {
+        width: 120px; /* Slightly smaller for smaller screens */
+        height: 120px;
+    }
+}
