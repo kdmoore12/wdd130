@@ -66,7 +66,8 @@ nav a:hover {
 
 .hero-image {
     width: 100%;
-    display: block;
+    height: 400px;
+    object-fit: cover;
 }
 
 .hero h1 {
@@ -196,6 +197,7 @@ footer a {
         width: 120px;
     }
 }
+
 /* Employee Profiles */
 .employee-profiles {
     display: flex;
@@ -244,4 +246,93 @@ footer a {
         width: 120px; /* Slightly smaller for smaller screens */
         height: 120px;
     }
+}
+
+/* Newsletter Signup */
+.newsletter {
+    background-color: var(--accent1-color);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 80%;
+    color: var(--white);
+}
+
+.newsletter h2 {
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Call to Action Section */
+.cta {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: var(--accent2-color);
+}
+
+/* About Section Grid Layout */
+.about {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
